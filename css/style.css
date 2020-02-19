@@ -8,20 +8,20 @@
   box-sizing: border-box;
 }
 
-/* THIS IS ALL meant for editing. You might want to do it differently, 
-name the variables differently, 
+/* THIS IS ALL meant for editing. You might want to do it differently,
+name the variables differently,
 use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #3974B3;
+  --link-color: #85C0FF;
+  --link-hover-color: #6BB3FF;
+  --color-4: #B37B17;
+  --color-5: #FFC96B;
 
   --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
+  --secondary-font: "anonymous-pro" , monospace;
   --main-text-color: #000;
 
   --white-space: 1rem;
@@ -32,10 +32,12 @@ button {
 }
 a {
   transition: all 3s;
+  font-family: var(--secondary-font);
+
 }
 button:hover {
   background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  transform: scale(1.1) ;
 }
 
 button:active {
@@ -44,11 +46,12 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
+  font-size: 1.1rem;
 }
 html {
   font-size: 100%;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
+
 }
 
 img {
@@ -71,11 +74,11 @@ footer {
 }
 
 .header-wrapper h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  padding-right: 0.75em;
-  font-weight: bold;
+     font-size: 2.4rem;
+    font-weight: bold;
+    font-family: reklame-script, sans-serif;
+    font-weight: 700;
+    font-style: normal;
   color: white;
 }
 
@@ -152,19 +155,27 @@ ul li:last-child {
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/sea.jpg) top left repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+  background: url(../img/sand.jpg) top left repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/iceberg.jpg) top left repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../img/salt.jpg) top left repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .images ul {
@@ -180,23 +191,21 @@ ul li:last-child {
 
 button {
   padding: 1rem;
-  border-radius: 4px;
+  border: none;
   background: var(--link-color);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  font: bold 1.25em/1 var(--secondery-font);
   letter-spacing: 1px;
   color: white;
   text-transform: uppercase;
   text-shadow: 0px -1px 0px #0374a0;
   transition: all 0.2s ease;
   cursor: pointer;
+  border-radius: 500px;
   margin: 0 1rem 1rem 0;
 }
 
-.secondary-button {
-  background: var(--color-5);
-}
 
 button:focus,
 button:active,
@@ -209,9 +218,12 @@ button:focus-within {
   color: var(--main-text-color);
 }
 
-.h1-sample {
-  font-size: 2.4rem;
-  font-weight: bold;
+h1 {
+     font-size: 2.4rem;
+    font-weight: bold;
+    font-family: reklame-script, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .h2-sample {
@@ -255,8 +267,9 @@ p[class*="font-details-"] {
   opacity: 0.5;
 }
 
-.adjectives ul {
-  flex-direction: column;
+.adjectives ul li:not(first-child){
+
+margin-left: 20px;
 }
 
 footer {
